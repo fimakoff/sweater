@@ -41,7 +41,10 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+        </dependency>
         <!-- security -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -53,8 +56,6 @@
             <artifactId>spring-boot-starter-mail</artifactId>
             <version>2.1.7.RELEASE</version>
         </dependency>
-
-
     </dependencies>
 
     <properties>
@@ -67,6 +68,11 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.flywaydb</groupId>
+                <artifactId>flyway-maven-plugin</artifactId>
+                <version>5.2.4</version>
             </plugin>
         </plugins>
     </build>
