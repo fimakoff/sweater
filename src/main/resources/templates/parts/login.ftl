@@ -27,7 +27,6 @@
             </div>
         </div>
         <#if isRegisterForm>
-<#--            </div>-->
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Password:</label>
                 <div class="col-sm-6">
@@ -53,6 +52,14 @@
                         </div>
                     </#if>
                 </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="g-recaptcha" data-sitekey="6LeajrMUAAAAALu5AxZT7_BkQ3t_M6pXGviHHnVJ"></div>
+                <#if captchaError??>
+                    <div class="alert alert-danger" role="alert">
+                        ${captchaError}
+                    </div>
+                </#if>
             </div>
         </#if>
         <input type="hidden" name="_csrf" value="${_csrf.token}"/>
