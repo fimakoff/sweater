@@ -54,8 +54,8 @@ public class RegistrationController {
         }
 
         boolean isConfirmEmpty = StringUtils.isEmpty(passwordConfirm);
-        if (isConfirmEmpty){
-            model.addAttribute("passwordConfirmError","Password confirmation cannot be empty");
+        if (isConfirmEmpty) {
+            model.addAttribute("passwordConfirmError", "Password confirmation cannot be empty");
         }
         if (user.getPassword() != null && !user.getPassword().equals(passwordConfirm)) {
             model.addAttribute("passwordError", "Passwords are different");
@@ -72,16 +72,15 @@ public class RegistrationController {
         return "redirect:/login";
     }
 
-
     @GetMapping("/activate/{code}")
     public String activate(Model model, @PathVariable String code) {
         boolean isActivated = userService.activateUser(code);
 
         if (isActivated) {
-            model.addAttribute("messageType","success");
+            model.addAttribute("messageType", "success");
             model.addAttribute("message", "User successfully activated");
         } else {
-            model.addAttribute("messageType","danger");
+            model.addAttribute("messageType", "danger");
             model.addAttribute("message", "Activation code is not found!");
         }
 

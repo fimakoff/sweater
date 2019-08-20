@@ -16,6 +16,9 @@
     <#include "navbar.ftl">
     <div class="container mt-5">
         <#nested>
+        <div class="shadow p-3 mb-5 bg-white rounded fixed-bottom">
+            great thanks to <b>dru</b> from <b>letscode</b> channel on youtube for his video tutorials, on which this application was created.
+        </div>
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
