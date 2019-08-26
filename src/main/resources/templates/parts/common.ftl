@@ -16,8 +16,8 @@
     <#include "navbar.ftl">
     <div class="container mt-5">
         <#nested>
-        <div class="shadow p-3 mb-5 bg-white rounded fixed-bottom">
-            great thanks to <b>dru</b> from <b>letscode</b> channel on youtube for his video tutorials, on which this application was created.
+        <div class="shadow p-3 mb-5 bg-white rounded fixed-bottom ">
+            great thanks to <b>dru</b> from <b>letscode</b> <a href="https://www.youtube.com/channel/UC1g3kT0ZcSXt4_ZyJOshKJQ" target="_blank" >channel</a> on youtube for his video tutorials, on which this application was created.
         </div>
     </div>
     <!-- Optional JavaScript -->
