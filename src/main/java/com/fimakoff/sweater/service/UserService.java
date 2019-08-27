@@ -23,7 +23,7 @@ public class UserService implements UserDetailsService {
     private MailSender mailSender;
     @Autowired
     private PasswordEncoder passwordEncoder;
-    @Value("@{hostname}")
+    @Value("${hostname}")
     private String hostname;
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
